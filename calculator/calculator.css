@@ -1,0 +1,43 @@
+.stracture {
+  width: 460px;
+  height: 540px;
+  background-color: rgb(43, 40, 40);
+  margin: auto;
+  padding: 10px;
+  border-radius: 15px;
+}
+p {
+  margin-left: 10px;
+  color: azure;
+  font-size: 1.5rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+#screen {
+  background-color: rgb(125, 203, 203);
+  height: 80px;
+  width: 440px;
+  margin: 5px;
+  font-size: 4rem;
+  text-align: right;
+  border-radius: 10px;
+}
+.button {
+  background-color: rgb(37, 35, 35);
+  color: azure;
+  width: 92px;
+  height: 70px;
+  font-size: 2.5rem;
+  margin: 10px;
+  border-radius: 15px;
+}
+.clear {
+  background: red;
+}
+.operator {
+  /* use dfor crating background coloures for operator buttons */
+  background-color: rgb(96, 95, 95);
+}
+.button:hover {
+  /*used for creating an hower effect to the button when the mouse is move on it */
+  border: 5px solid blanchedalmond;
+}

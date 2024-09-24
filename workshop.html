@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>foreach loop- object</title>
+  </head>
+  <body>
+    <h1>performing addEventLisiner</h1>
+    <button class="click1">click me1</button><br /><br />
+    <button class="click2">click me2</button>
+    <h1 class="save1"></h1>
+    <h1 class="save2"></h1>
+
+    <script>
+      first = document.querySelector(".click1");
+      second = document.querySelector(".click2");
+
+      function hello1() {
+        document.querySelector(".save1").innerHTML =
+          "you clicked in the first button";
+      }
+
+      function hello2() {
+        document.querySelector(".save2").innerHTML =
+          "you clicked in the second button";
+      }
+      first.addEventListener("click1", hello1);
+      second.addEventListener("click2", hello2);
+    </script>
+  </body>
+</html>

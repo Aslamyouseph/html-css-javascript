@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array operations</title>
+    <style>
+      /* Add some basic styling to make the list look nicer */
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      li {
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+      }
+      li:last-child {
+        border-bottom: none;
+      }
+      button {
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #3e8e41;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ToDO List Practice 1</h1>
+
+    <!-- ADD TASK -->
+    <input
+      type="text"
+      id="Array"
+      onkeydown="keydownn(event)"
+      placeholder="Todo name"
+    />
+    <input type="date" onkeydown="keydownn(event)" id="date" />
+    <button onclick="add()">Add</button>
+
+    <!-- SHOW LIST -->
+    <div id="displaying"></div>
+
+    <script>
+      let myArray = []; // global array declaration
+
+      // TYPE TASK
+      function keydownn(event) {
+        if (event.key === "Enter") {
+          add();
+        }
+      }
+
+      // ADD TASK
+      function add() {
+        let addingToAyyay = document.getElementById("Array").value;
+        let dateToAyyay = document.getElementById("date").value;
+        myArray.push({ task: addingToAyyay, date: dateToAyyay }); //adding in a key value formate(object like)
+
+        console.log(myArray);
+
+        let list = "";
+        /*mainly foreach loop we using in an array(item indicate to the set of each item and the index reffered to the index value of each item )
+         in the bellow example myArray.forEach((item, index) this means take the item(set of elements ) form myArray then perfom the foreach loop*/
+        myArray.forEach((item, index) => {
+          // console.log(item);
+          // console.log(index);
+          list += `
+            <li>
+              ${item.task} - ${item.date}
+              <button onclick="deleteItem(${index})">Delete</button>
+            </li>
+          `;
+        });
+
+        // SHOW LIST
+        document.getElementById("displaying").innerHTML = `<ul>${list}</ul>`;
+
+        // CLEAR FIELDS
+        document.getElementById("Array").value = ""; // clear the input box
+        document.getElementById("date").value = ""; // clear the date input box
+      }
+
+      // DELETE TASK
+      function deleteItem(index) {
+        myArray.splice(index, 1);
+        let list = "";
+        myArray.forEach((item, index) => {
+          list += `
+            <li>
+              ${item.task} - ${item.date}
+              <button onclick="deleteItem(${index})">Delete</button>
+            </li>
+          `;
+        });
+        // SHOW LIST
+        document.getElementById("displaying").innerHTML = `<ul>${list}</ul>`;
+      }
+    </script>
+  </body>
+</html>

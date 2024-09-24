@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>object</title>
+  </head>
+  <body>
+    <script>
+      const product = {
+        name: "socks",
+        price: "500",
+        brand: "addidas",
+        "delivery-time": "1 day",
+        ratinggg: {
+          stars: 4.5,
+          count: 87,
+        },
+        operatons() {
+          console.log("hello");
+          console.log(this.name);
+        },
+      };
+
+      console.log(product);
+      console.log(product.name);
+      console.log(product.price);
+      console.log(product.brand);
+      product.name = "cotton socks";
+      console.log(product.name);
+      console.log(product);
+      product.price = "700";
+      console.log(product.price);
+      console.log(product);
+      product.rating = "good";
+      console.log(product);
+      delete product.rating;
+      console.log(product);
+      console.log(typeof product);
+      //console.log(product.ddelivery - time); not able to access this so do it in next way
+      console.log(product["delivery-time"]); // this way we can able to access it
+      console.log(product);
+      console.log(product.ratinggg.stars);
+      console.log(product.ratinggg.count);
+      product.operatons();
+      //converting the object into JSON
+      let result1 = JSON.stringify(product);
+      console.log(result1);
+      //converting JSON into object
+      let result2 = JSON.parse(result1);
+      console.log(result2);
+    </script>
+  </body>
+</html>

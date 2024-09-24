@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigation Bar</title>
+    <link rel="stylesheet" href="navigation.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <button class="overview-btn" onclick="toggleMenu()">menu</button>
+      <ul class="nav-links">
+        <li>
+          <a href="home.html"
+            ><big><b>Home</b></big></a
+          >
+        </li>
+        <li class="dropdown">
+          <a href="Laptops.html"
+            ><big><b>Laptops</b></big></a
+          >
+          <div class="dropdown-content">
+            <a href="GamingLaptops.html">Gaming Laptops</a>
+            <a href="BudgetLaptops.html">Budget Laptops</a>
+            <a href="BusinessLaptops.html">Business Laptops</a>
+            <a href="StudentLaptops.html">Student Laptops</a>
+            <a href="Who_need_tablets.html">Who need tablets</a>
+            <a href="2_in_one.html">2 in one</a>
+          </div>
+        </li>
+        <li>
+          <a href="Deals.html"
+            ><big><b>Best Deals</b></big></a
+          >
+        </li>
+        <li>
+          <a href="News.html"
+            ><big><b>News</b></big></a
+          >
+        </li>
+        <li>
+          <a href="Review.html"
+            ><big><b>Review</b></big></a
+          >
+        </li>
+        <li>
+          <a href="Services.html"
+            ><big><b>Services</b></big></a
+          >
+        </li>
+        <li>
+          <a href="About.html"
+            ><big><b>About us</b></big></a
+          >
+        </li>
+        <li>
+          <a href="Contact.html"
+            ><big><b>Contact Us</b></big></a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      function toggleMenu() {
+        var navLinks = document.querySelector(".nav-links");
+        navLinks.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>

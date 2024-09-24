@@ -1,0 +1,358 @@
+/* used to give background colour of a webpage */
+body {
+  background-color: rgb(186, 229, 235);
+}
+h4 {
+  color: blue;
+}
+h3 {
+  color: rgb(69, 16, 216);
+}
+h2 {
+  background: #0584ae82;
+} /* used for removing the whitespace of border */
+table {
+  /*used for colouring inside the coloum */
+  background-color: blanchedalmond;
+  border-collapse: collapse;
+}
+th,
+td {
+  text-align: center;
+  padding: 5px;
+}
+/*used for colouring the coloum heading */
+th {
+  background-color: rgb(226, 25, 166);
+}
+caption {
+  color: rgb(58, 7, 242);
+}
+/*used for removing the underline from the link*/
+a:link {
+  text-decoration: none;
+}
+/*used for giving colour when cursed is in link */
+a:hover {
+  color: red;
+}
+body {
+  background-image: url("/photoes/brown.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+/*class attributrs given */
+.vegitable {
+  font-style: italic;
+  color: black;
+  background-color: chocolate;
+}
+/*class attributrs given */
+.fruits {
+  font-style: italic;
+  color: white;
+  background-color: blueviolet;
+}
+/*id attributes */
+#frut1 {
+  background-color: brown;
+  color: white;
+}
+/*id attributes */
+#frut2 {
+  background-color: rgb(39, 2, 2);
+  color: white;
+}
+/*id attributes */
+#veg1 {
+  background-color: antiquewhite;
+  color: black;
+}
+/*id attributes */
+#veg2 {
+  background-color: rgb(34, 138, 173);
+  color: black;
+} /*used for navigation menu bar */
+/* if we want to give any specific funtion to any specific attribute the use the class cammand or id cammand  we: is in under(also reffer the specific
+code in the aslam_style .html .16 line) this way we can give it  */
+.navigator ul {
+  list-style-type: none;
+  overflow: hidden;
+  background-color: rgb(179, 7, 7);
+  color: azure;
+  font-size: 20px;
+}
+.navigator {
+  /*used for making the navigator bar in sticky so thats why when we scroll the screen then the navigator bar does not go upward it is always in the window */
+  position: sticky;
+  top: 0px;
+}
+/*used for navigation menu bar */
+.navigator li {
+  float: left;
+  padding: 15px;
+}
+/*used for navigation menu bar */
+.navigator li:hover {
+  background-color: blue;
+}
+/* if we want to give any specific funtion to any specific attribute the use the class cammand or id cammand  we: is in under(also reffer the specific
+code in the aslam_style .html 86 line) this way we can give it  */
+tr:hover {
+  background-color: gray; /*used for giving the grey colour when cruser is reached in there */
+}
+.t2 {
+  background-color: rgb(160, 222, 16);
+}
+.t2 caption {
+  color: rgb(250, 0, 75);
+}
+.t2 th {
+  background-color: blue;
+}
+.t3 {
+  background-color: rgb(16, 198, 222);
+}
+.t3 caption {
+  color: rgb(255, 0, 217);
+}
+.t3 th {
+  background-color: rgb(255, 0, 166);
+}
+.btn {
+  /*used for giving the colour for sumbitt button */
+  background-color: rgb(247, 89, 4);
+  border: none;
+  padding: 10px 20px;
+  color: blue;
+  font-size: 20px;
+}
+.rst {
+  /*used for giving the colour for reset button */
+  background-color: rgb(244, 128, 4);
+  border: none;
+  padding: 10px 20px;
+  color: blue;
+  font-size: 20px;
+}
+/* used for selcector (selecting s particular thing for giving the name*/
+#head2 {
+  /*id selector*/
+  color: blue;
+  background-color: rgb(205, 128, 11);
+}
+#head2:hover {
+  /*used as hover (pusedo class*/
+  color: rgb(30, 252, 9);
+  background-color: black;
+}
+.p1 {
+  /*class selector*/
+  text-align: center;
+}
+#head1 {
+  /*boder setting*/
+  border-style: solid;
+  border-width: 10px;
+  border-color: rgb(229, 255, 0);
+  border-radius: 20px;
+  text-shadow: 2px 2px 5px rgb(234, 241, 235); /*used to give a show to the text*/
+}
+.address {
+  /*margin is used*/
+  margin: 20px;
+}
+#head3 {
+  /*used for making the outline*/
+  border: 5px solid black;
+  width: 400px;
+  height: 200px;
+  outline-style: dotted;
+  outline-width: 10px;
+  outline-color: rgba(9, 215, 29, 0.845);
+  outline-offset: 5px;
+  margin-left: 300px;
+  margin-bottom: 50px;
+  border-radius: 40px 40px 40px 40px; /*used for creating different shapes(border radious )*/
+  box-shadow: 20px 20px 20px black;
+}
+.p2:active {
+  /* used active(pusedo class)*/
+  color: rgb(44, 10, 238);
+  background-color: black;
+}
+.p2 {
+  text-align: center;
+  color: aqua;
+}
+ul {
+  /*used for giving a squre notation to the unorderd list */
+  list-style-type: square;
+}
+ol {
+  /*used for giving a squre notation to the orderd list */
+  list-style-type: upper-roman;
+}
+.p3 {
+  /*used for creating overflow techinque */
+  height: 250px;
+  overflow: scroll;
+}
+.div1 {
+  background-position: top right;
+  margin: 2px;
+  position: fixed;
+  right: 10px;
+}
+.div1 {
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-attachment: fixed;
+}
+#h1:hover {
+  /*used as hover (pusedo class*/
+  color: rgb(30, 252, 9);
+  background-color: black;
+}
+#h2:hover {
+  /*used as hover (pusedo class*/
+  color: rgb(22, 233, 3);
+  background-color: black;
+}
+a:link {
+  /*if link is not vissitted time*/
+  color: rgb(14, 14, 232);
+}
+a:visited {
+  /*if link is vissitted time*/
+  color: rgb(5, 206, 241);
+}
+#div2 {
+  margin-left: 50px;
+  margin-top: 20px;
+  border-radius: 20px;
+  box-shadow: 20px 20px 20px black;
+}
+#div3 {
+  /*used for giving gradient for text shadow */
+  margin-top: 100px;
+  margin-left: 200px;
+  height: 300px;
+  width: 1000px;
+  border-radius: 20px;
+  background-image: linear-gradient(
+    to bottom right,
+    green,
+    blue,
+    red,
+    black,
+    yellow,
+    brown
+  );
+  box-shadow: 20px 20px 20px black;
+}
+#div4 {
+  /*used for giving gradient for box shadow*/
+  height: 400px;
+  width: 400px;
+  margin-left: 1000px;
+  margin-top: 20px;
+  border-radius: 20px;
+  background-image: radial-gradient(green, blue, red, black, yellow, brown);
+  box-shadow: 20px 20px 20px black;
+}
+#img {
+  /*used for the rotation of the image (transition)*/
+  transition: transform 1s;
+  transition-timing-function: linear;
+  margin-left: 100px;
+}
+#img:hover {
+  /*used for the rotation of the image (transition)*/
+  transform: rotate(360deg);
+}
+#div5 {
+  /*used for the animation */
+  height: 10px;
+  width: 60px;
+  border-radius: 50px;
+  background-color: rgb(194, 237, 19);
+  position: relative;
+  animation-name: move;
+  animation-duration: 4s;
+  animation-iteration-count: 50;
+  animation-direction: normal;
+  animation-timing-function: linear;
+}
+@keyframes move {
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: 1400px;
+  }
+}
+#div6 {
+  /*used for the animation */
+  height: 10px;
+  width: 60px;
+  border-radius: 50px;
+  background-color: rgb(17, 196, 220);
+  position: relative;
+  animation-name: move;
+  animation-duration: 4s;
+  animation-iteration-count: 50;
+  animation-direction: reverse;
+  animation-timing-function: linear;
+}
+@keyframes move {
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: 1400px;
+  }
+}
+#div7 {
+  /*used for the animation */
+  height: 10px;
+  width: 60px;
+  border-radius: 50px;
+  background-color: rgb(220, 18, 153);
+  position: relative;
+  animation-name: move;
+  animation-duration: 4s;
+  animation-iteration-count: 50;
+  animation-direction: normal;
+  animation-timing-function: linear;
+}
+@keyframes move {
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: 1400px;
+  }
+}
+#div8 {
+  /*used for the animation */
+  height: 10px;
+  width: 60px;
+  border-radius: 50px;
+  background-color: rgb(194, 55, 55);
+  position: relative;
+  animation-name: move;
+  animation-duration: 4s;
+  animation-iteration-count: 50;
+  animation-direction: reverse;
+  animation-timing-function: linear;
+}
+@keyframes move {
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: 1400px;
+  }
+}

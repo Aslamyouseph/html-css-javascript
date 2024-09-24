@@ -1,0 +1,28 @@
+.btn {
+  position: relative;
+  top: 250px;
+  left: 50%;
+}
+.btn {
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 0.5rem 1rex;
+  color: rgb(203, 44, 44);
+  background-color: rgb(203, 66, 180);
+  border: 10px solid red;
+  border-radius: 5px;
+
+  /* this property need to include in the needed class to give a smoot trandition to the button  */
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+  background-color: 0.3s;
+  color: 0.3s;
+}
+.btn:hover {
+  /*up the button duting the hover time*/
+  transform: translateY(-10px);
+  color: white;
+  background-color: blue;
+}

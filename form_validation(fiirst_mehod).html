@@ -1,0 +1,119 @@
+<html>
+  <head>
+    <title>Form validation first method</title>
+    <link rel="stylesheet" href="form_validation.css" />
+    <script>
+      function validation() {
+        //document.form is a bulid in class
+        //["regform"]["name"]: means take name (in html 73 line) from regform(in html 67 line) and store to var name(9 line)
+        var name = document.forms["regform"]["name"];
+        var email = document.forms["regform"]["email"];
+        var phone = document.forms["regform"]["phone"];
+        var what = document.forms["regform"]["subject"];
+        var password = document.forms["regform"]["password"];
+        var address = document.forms["regform"]["address"];
+        if (name.value == "") {
+          alert("please enter your name : ");
+          name.focus(); // focus();it is used for focusing the particular feild if the used didnot enter it
+          return false;
+        }
+        if (address.value == "") {
+          alert("please enter your address : ");
+          address.focus();
+          return false;
+        }
+        if (email.value == "") {
+          alert("please enter your name : ");
+          email.focus();
+          return false;
+        }
+        if (email.value.indexOf("@", 0) < 0) {
+          alert("please enter the valid email id : ");
+          email.focus();
+          return false;
+        }
+        if (email.value.indexOf(".", 0) < 0) {
+          alert("please enter the valid email id : ");
+          email.focus();
+          return false;
+        }
+        if (phone.value == "") {
+          alert("please enter your phone number :  : ");
+          phone.focus();
+          return false;
+        }
+        if (password.value == "") {
+          alert("please enter your password  : ");
+          password.focus();
+          return false;
+        }
+        if (what.selectedIndex < 1) {
+          alert("please enter your subject : ");
+          what.focus();
+          return false;
+        }
+        return true;
+      }
+    </script>
+  </head>
+  <body>
+    <br />
+    <h1 style="color: red">
+      <center>
+        REGISTRATION FORM :
+        <hr style="height: 0.1%" color="black" />
+      </center>
+    </h1>
+    <form name="regform" onsubmit="return validation()" method="post">
+      <!-- regform :  it is the name of our form  -->
+      <!--on submitt means when we click the submitt button then it   calls the 6th line funtion   -->
+      <!-- method=post means our data is protected -->
+      <br />
+      <!--used for crating a box whic is used to insert the name -->
+      <p>NAME : <input type="text" name="name" size="50" /></p>
+      <br />
+      <!--used for crating a box whic is used to insert the address -->
+      <p>ADDRESS :</p>
+      <textarea name="address" cols="30" rows="5"></textarea>
+      <br /><br />
+      <!--used for crating a box whic is used to insert the email -->
+      <p>E-MAIL : <input type="text" name="email" size="60" /></p>
+      <br /><br />
+      <!--used for crating a box whic is used to insert the password -->
+      <p>PASSWORD : <input type="password" name="password" size="60" /></p>
+      <br /><br />
+      <!--used for crating a box whic is used to insert the phone number  -->
+      <p>
+        PHONE_NUMBER :<input
+          type="tel"
+          name="phone"
+          placeholder=" 123-456-7890 "
+          maxlength="10"
+        />
+      </p>
+      <br /><br />
+      <!--used for crating a box whic is used to insert the selecting condents -->
+      <p>SELECT_YOUR_SUBJECT :</p>
+      <select type="text" value="" name="subject">
+        <option>coures</option>
+        <option>BCA</option>
+        <option>BBA</option>
+        <option>BCOM</option>
+        <option>BSW</option>
+        <option>BVOC</option>
+        <option>POLITECHIC</option>
+        <option>DEPLOMA</option>
+      </select>
+      <br /><br />
+      <!--used for crating a box whic is used to insert the feedback -->
+      <p>FEED BACK :</p>
+      <textarea name="camment" cols="30" rows="5"></textarea>
+      <br /><br />
+      <!--used for crating a box whic is used for the submittion box and reset box -->
+      <p>
+        <input type="submit" value="sent" name="submit" />
+        <input type="reset" value="reset" name="reset" />
+      </p>
+    </form>
+  </body>
+</html>

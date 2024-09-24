@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>setTime out second method</title>
+  </head>
+  <body>
+    <script>
+      //example  for the asyncronus code
+      function calling() {
+        console.log("hello my name is aslma youseph");
+      }
+
+      console.log("started");
+      setTimeout(calling, 2000); //in here we set a function and after 2000 time this function were only call
+
+      console.log("started");
+      setTimeout(calling, 2000);
+
+      console.log("started");
+      setTimeout(calling, 2000);
+
+      console.log("started");
+      setTimeout(calling, 2000);
+    </script>
+  </body>
+</html>

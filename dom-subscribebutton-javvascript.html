@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dom-operations</title>
+  </head>
+  <body>
+    <button class="subscribe" onclick="sub()">subscribe</button>
+
+    <script>
+      function sub() {
+        //in here the value in button where accessing and storing to the value varible
+        let value = document.querySelector(".subscribe");
+        //cheching is in this formate(insted of innerHTML we can use InnerText )
+        if (value.innerText === "subscribe") {
+          value.innerHTML = "subscribed";
+          alert("congratulation you where " + value.innerHTML);
+        } else {
+          value.innerHTML = "subscribe";
+          alert("please " + value.innerHTML);
+        }
+        console.log(value.innerHTML);
+      }
+    </script>
+  </body>
+</html>

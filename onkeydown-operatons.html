@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>workshop</title>
+  </head>
+  <body>
+    name :-<input type="text" id="one" onkeydown="keydown(event)" />
+    <button onclick="ok()">click</button>
+
+    <script>
+      console.log(event);
+      function keydown(event) {
+        if (event.key === "Enter") {
+          ok();
+        }
+      }
+      function ok() {
+        alert("hello");
+        document.getElementById("one").value = "";
+      }
+    </script>
+  </body>
+</html>

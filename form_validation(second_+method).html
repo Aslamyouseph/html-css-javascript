@@ -1,0 +1,113 @@
+<html>
+  <head>
+    <title>form validation second method</title>
+    <link rel="stylesheet" href="form_validation.css" />
+    <script>
+      function validation() {
+        var name = document.getElementById("username"); // in here username is acces from (72 line, id section ) and store it into the var name
+        var address = document.getElementById("useraddress");
+        var phone = document.getElementById("userphone");
+        var email = document.getElementById("useremail");
+        var password = document.getElementById("userpassword");
+        var cpassword = document.getElementById("cpassword");
+        var feedback = document.getElementById("feedback");
+        if (name.value == "") {
+          alert("please enter your name :");
+          name.focus(); // focus();it is used for focusing the particular feild if the used didnot enter it
+          return false;
+        }
+        if (address.value == "") {
+          alert("please enter your address :");
+          address.focus();
+          return false;
+        }
+        if (phone.value == "") {
+          alert("please enter your phone number  :");
+          phone.focus();
+          return false;
+        }
+        if (email.value.indexOf("@", 0) < 0) {
+          alert("please enter the valid email id : ");
+          email.focus();
+          return false;
+        }
+        if (email.value.indexOf(".", 0) < 0) {
+          alert("please enter the valid email id : ");
+          email.focus();
+          return false;
+        }
+        if (password.value == "") {
+          alert("please enter your password :");
+          password.focus();
+          return false;
+        }
+        if (cpassword.value == "") {
+          alert("please confirm your password :");
+          cpassword.focus();
+          return false;
+        }
+        if (password.value == "" || password.value != cpassword.value) {
+          //used to check the two passwords
+          alert("password is miss maching to the previous one :");
+          password.focus();
+          return false;
+        }
+        if (feedback.value == "") {
+          alert("please enter any feedback  :");
+          feedback.focus();
+          return false;
+        }
+        return true;
+      }
+    </script>
+  </head>
+  <body>
+    <br />
+    <h1 style="color: red">
+      <center>REGISTRATION FORM :</center>
+      <hr style="height: 0.2%" color="black" />
+    </h1>
+    <br />
+    <form name="regform" onsubmit="return validation()" method="post">
+      <label>NAME :</label>
+      <!--id is imporant (only by id 7th line can able to acces the value)-->
+      <input name="username" type="text" id="username" size="50" /><br /><br />
+      <label>ADDRESS :</label>
+      <br />
+      <textarea name="address" cols="50" rows="5" id="useraddress"></textarea
+      ><br />
+      <br />
+      <label>PHONE_NUMBER :</label>
+      <input
+        type="tel"
+        name="phone"
+        placeholder=" 123-456-7890 "
+        maxlength="10"
+        id="userphone"
+      />
+      <br /><br />
+      <label>E-MAIL :</label>
+      <input name="email" type="email" id="useremail" size="50" /><br /><br />
+      <label>PASSWORD :</label>
+      <input
+        name="password"
+        type="password"
+        id="userpassword"
+        size="50"
+      /><br /><br />
+      <label>CONFIRM-PASSWORD :</label>
+      <input
+        name="cpassword"
+        type="password"
+        id="cpassword"
+        size="50"
+      /><br /><br />
+      <label>FEEDBACK :</label>
+      <br />
+      <textarea name="camment" cols="30" rows="5" id="feedback"></textarea>
+      <br /><br />
+      <input type="submit" value="REGISTER" />
+      <input type="reset" value="RESET" />
+    </form>
+  </body>
+</html>

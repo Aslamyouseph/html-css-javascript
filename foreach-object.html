@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>foreach loop- object</title>
+  </head>
+  <body>
+    <h1>foreach in object operation</h1>
+    <script>
+      let persons = {
+        name1: "aslam",
+        name2: "youseph",
+        name3: "aseena",
+        name4: "afnitha",
+        name5: "appu",
+      };
+
+      Object.keys(persons).forEach((key) => {
+        console.log(`Key: ${key}, Value: ${persons[key]}`);
+      });
+    </script>
+  </body>
+</html>

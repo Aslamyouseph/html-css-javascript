@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissor</title>
+  </head>
+  <body>
+    <h1>Play Rock Paper Scissor</h1>
+    <button onclick="play('Rock')">Rock</button>
+    <button onclick="play('Paper')">Paper</button>
+    <button onclick="play('Scissor')">Scissor</button>
+    <button onclick="Reset()">Reset Score</button>
+
+    <script>
+      /*in this way we first store the values (like a object) but it always store it in temperary only after reffersh or close
+      the page then the value stored in the point varible will desapear. so insted to it we permenatly store the vales
+      in line number 28 so when we reffresh or close the page it doesnot remove the data . always we can able to access our previous data
+      const point = {
+      wins: "0",
+      loses: "0",
+      ties: "0",
+      };  */
+
+      /*it is used to retrive the localStorage value.
+      JSON.parse is used to convert the  string into object
+       */
+      let point = JSON.parse(localStorage.getItem("point"));
+      console.log(point);
+
+      /* this section is used when we delete the value from the localStorage and then we try to 
+      access the value then error will occuer so give a defult value to object after the deleting*/
+      if (point === null) {
+        point = {
+          wins: 0,
+          loses: 0,
+          ties: 0,
+        };
+      }
+
+      //used for reset the code
+      function Reset() {
+        point.wins = 0;
+        point.loses = 0;
+        point.ties = 0;
+        // In here the item which we remove from the local storage(and check the line 31)
+        localStorage.removeItem("point");
+        alert(
+          `win : ${point.wins} ,lose : ${point.loses} , ties: ${point.ties}`
+        );
+      }
+
+      //used for playing
+      function play(action) {
+        // Random choice for the computer: 1 = Rock, 2 = Paper, 3 = Scissor
+        let computerChoice = Math.ceil(Math.random() * 3);
+        let computerAction = "";
+        // Assign a string to computerAction based on the random number
+        if (computerChoice == 1) {
+          computerAction = "Rock";
+        } else if (computerChoice == 2) {
+          computerAction = "Paper";
+        } else if (computerChoice == 3) {
+          computerAction = "Scissor";
+        }
+        // Compare user's choice with computer's choice
+        if (action == computerAction) {
+          point.ties++;
+          alert(
+            `You chose ${action} and computer chose  ${computerAction} It's a tie! ,win : ${point.wins} ,lose : ${point.loses} ,ties : ${point.ties}`
+          );
+        } else if (
+          (action == "Rock" && computerAction == "Scissor") ||
+          (action == "Paper" && computerAction == "Rock") ||
+          (action == "Scissor" && computerAction == "Paper")
+        ) {
+          point.wins++;
+          alert(
+            `You chose ${action} and computer chose  ${computerAction} you win! ,win : ${point.wins} ,lose : ${point.loses} ,ties : ${point.ties}`
+          );
+        } else {
+          point.loses++;
+          alert(
+            `You chose ${action} and computer chose  ${computerAction} you loses! ,win : ${point.wins} ,lose : ${point.loses} ,ties : ${point.ties}`
+          );
+        }
+        /*storing the values to localStorage to get the current value after reffresh.it always store the value (point)in permenentrly
+        JSON.stringify used to conver the object into json string */
+        localStorage.setItem("point", JSON.stringify(point));
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,136 @@
+<html>
+  <head>
+    <title>calculator</title>
+    <link rel="stylesheet" href="calculator.css" />
+  </head>
+
+  <body>
+    <h2 style="color: rgb(230, 4, 64)">
+      <br />
+      <br />
+      <center>
+        <b>CALCULATOR ...</b>
+        <br />
+        <br />
+        <hr style="height: 0.2%" color="black" />
+      </center>
+    </h2>
+    <!-- in css (1 line ownwardds for , stracture giving of calculator )-->
+    <div class="stracture">
+      <form action="">
+        <!-- in css (9 line ownwardds ,for  CASIO edditing )-->
+        <p>CASIO</p>
+        <!-- in css (15 line ownwardds edditing the screen of calculator )-->
+        <input type="text" id="screen" />
+        <br />
+        <br />
+        <!-- in css (24 line ownwardds edditing the button (number) of calculator )-->
+        <!--java script line nuumber 4 when any button press then btnclick funtion call-->
+        <input
+          class="button number"
+          type="button"
+          value="7"
+          onclick="btnclick(value)"
+        /><!-- 39 is function when we click any key then the function of js line 4 call-->
+        <input
+          class="button number"
+          type="button"
+          value="8"
+          onclick="btnclick(value)"
+        />
+        <input
+          class="button number"
+          type="button"
+          value="9"
+          onclick="btnclick(value)"
+        />
+        <!-- in css 36 onwardes operators (+ - * / ) button modification -->
+        <input
+          class="button operator"
+          type="button"
+          value="/"
+          onclick="btnclick(value)"
+        />
+        <br />
+        <input
+          class="button number"
+          type="button"
+          value="4"
+          onclick="btnclick(value)"
+        />
+        <input
+          class="button number"
+          type="button"
+          value="5"
+          onclick="btnclick(value)"
+        />
+        <input
+          class="button number"
+          type="button"
+          value="6"
+          onclick="btnclick(value)"
+        />
+        <input
+          class="button operator"
+          type="button"
+          value="*"
+          onclick="btnclick(value)"
+        />
+        <br />
+        <input
+          class="button number"
+          type="button"
+          value="1"
+          onclick="btnclick(value)"
+        />
+        <input
+          class="button number"
+          type="button"
+          value="2"
+          onclick="btnclick(value)"
+        />
+        <input
+          class="button number"
+          type="button"
+          value="3"
+          onclick="btnclick(value)"
+        />
+        <input
+          class="button operator"
+          type="button"
+          value="+"
+          onclick="btnclick(value)"
+        />
+        <br />
+        <!-- in css 33 onwardes clear button modification -->
+        <!--when 111 button is used for clearing the screen it call js 7 line of code-->
+        <input
+          class="button clear"
+          type="button"
+          value="C"
+          onclick="clearscreen()"
+        />
+        <input
+          class="button number"
+          type="button"
+          value="0"
+          onclick="btnclick(value)"
+        />
+        <!--when we click the = (124) line then it call the js 15 line (findresult())-->
+        <input
+          class="button result"
+          type="button"
+          value="="
+          onclick="findresult()"
+        />
+        <input
+          class="button operator"
+          type="button"
+          value="-"
+          onclick="btnclick(value)"
+        />
+      </form>
+    </div>
+    <script src="calculator.js"></script>
+  </body>
+</html>

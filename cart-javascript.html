@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cart</title>
+  </head>
+  <body>
+    <h1>A simple program for add to cart (open it in the console section )</h1>
+
+    <button onclick="console.log('cart quntity &ensp;' + cartquntity)">
+      show quntity</button
+    >&ensp;&ensp;
+
+    <button
+      onclick="
+     cartquntity=cartquntity+1;
+     console.log(cartquntity + '&ensp;item is add to cart')"
+    >
+      Add to cart</button
+    >&ensp;&ensp;&ensp;
+
+    <button
+      onclick="
+     cartquntity= cartquntity+2;
+     console.log(cartquntity + ' &ensp;item is added to the cart')
+    "
+    >
+      +2</button
+    >&ensp;&ensp;&ensp;
+
+    <button
+      onclick="
+    cartquntity=cartquntity+3;
+    console.log(cartquntity + '&ensp; is added to the cart')"
+    >
+      +3</button
+    >&ensp;&ensp;
+
+    <button
+      onclick="
+    cartquntity=0;
+    console.log('cart quntity is Reset')
+    console.log(cartquntity + '&ensp;cart item')
+    "
+    >
+      Reset cart
+    </button>
+
+    <script>
+      // varible decleration for the cart section:
+      //assing the cart quntity as 0
+      let cartquntity = 0;
+    </script>
+  </body>
+</html>

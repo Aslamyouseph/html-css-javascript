@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>shipping charges</title>
+  </head>
+  <body>
+    <h1><u>Amazon shipping calculator</u></h1>
+    <br />
+    <br />
+    <h3>Order under 40 RS - 10 Rs for shipping charge</h3>
+    <br />
+    <h3>Order over 50 RS - Free shipping (No charge)</h3>
+    <br />
+    <br />
+    <input
+      type="text"
+      id="amount"
+      name="amount"
+      onkeydown="keydownn(event)"
+      placeholder="Enter the cost of order"
+      autocomplete="off"
+    />
+    <button onclick="calc()">calculate</button>
+    <!--in here the change will refflect (line number form 29.34)-->
+    <p class="charge"></p>
+
+    <script>
+      // key down event (also check the line 21)
+      function keydownn(event) {
+        if (event.key === "Enter") {
+          calc();
+        }
+      }
+
+      function calc() {
+        //DOM operations
+        let firstMoney = document.getElementById("amount").value;
+        finalMoney = Number(firstMoney); //used to convert the string from input box to number--Number() is used
+        //console.log(typeof finalMoney);
+        if (finalMoney < 40) {
+          let actualAmount = finalMoney + 10;
+          //DOM operations .changes the 20th line
+          document.querySelector(
+            ".charge"
+          ).innerHTML = `You need to pay ${actualAmount} (RS 10 extra as shipping charge)`;
+        } else {
+          //DOM operations .changes the 20th line
+          document.querySelector(
+            ".charge"
+          ).innerHTML = `You need to pay ${finalMoney} RS only - free shipping change`;
+        }
+      }
+    </script>
+  </body>
+</html>

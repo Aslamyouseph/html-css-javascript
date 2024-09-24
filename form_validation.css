@@ -1,0 +1,10 @@
+body {
+  background-color: rgb(213, 223, 225);
+  text-align: center;
+}
+h1 {
+  color: red;
+  font-size: 50px;
+}
+/* this page is linkedwith the form_validation.html
+this is used for the giving the back ground colour for the the form_validation page*/

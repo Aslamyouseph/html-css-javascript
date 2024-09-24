@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>object constructor</title>
+  </head>
+  <body>
+    <script>
+      function persons(name, age, place) {
+        this.name = name;
+        this.age = age;
+        this.place = place;
+        this.display = function () {
+          console.log(`name : ${this.name} age : ${age} place :${place}`);
+        };
+      }
+
+      const name1 = new persons("aslam", 21, "nellimattom"); //creating the objects
+      const name2 = new persons("afnitha", 17, "nellimattom");
+
+      name1.display();
+      name2.display();
+    </script>
+  </body>
+</html>

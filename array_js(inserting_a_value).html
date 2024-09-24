@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var limit = prompt("Enter the array limit: ");
+      var sum = []; // Array to store the numbers
+      var result = 0;
+      for (var i = 0; i < limit; i++) {
+        sum[i] = Number(prompt("Enter the " + (i + 1) + " array value: "));
+        result += sum[i];
+      }
+      document.write("Numbers entered: " + sum.join(", ") + "<br>");
+      document.write("Sum of the numbers is " + result);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissor</title>
+  </head>
+  <body>
+    <h1>Play Rock Paper Scissor</h1>
+    <button onclick="autoplay()">autoplay</button>
+    <!-- <button onclick="play('Rock')">Rock</button>
+    <button onclick="play('Paper')">Paper</button>
+    <button onclick="play('Scissor')">Scissor</button> -->
+    <!--edited text from DOM is saved to here (line number : 42,64,78,88)-->
+    <p class="result"></p>
+    <p class="chose"></p>
+    <p class="mark"></p>
+
+    <button onclick="Reset()">Reset Score</button>
+
+    <script>
+      /*it is used to retrive the localStorage value.
+      JSON.parse is used to convert the  string into object
+       */
+      let point = JSON.parse(localStorage.getItem("point"));
+      console.log(point);
+
+      if (point === null) {
+        point = {
+          wins: 0,
+          loses: 0,
+          ties: 0,
+        };
+      }
+
+      //used for reset the code
+      function Reset() {
+        point.wins = 0;
+        point.loses = 0;
+        point.ties = 0;
+        // In here the item which we remove from the local storages
+        localStorage.removeItem("point");
+        //operations performed by using DOM manupulaation
+        document.querySelector(
+          ".mark"
+        ).innerHTML = `win : ${point.wins} ,lose : ${point.loses} ,ties : ${point.ties}`;
+      }
+      //automaticaly play when we click the button
+      function autoplay() {
+        setInterval(function () {
+          let playerChoice = Math.ceil(Math.random() * 3);
+          let playerAction = "";
+          if (playerChoice == 1) {
+            playerAction = "Rock";
+          } else if (playerChoice == 2) {
+            playerAction = "Paper";
+          } else if (playerChoice == 3) {
+            playerAction = "Scissor";
+          }
+          play(playerAction);
+        }, 3000);
+      }
+      //used for playing
+      function play(action) {
+        // Random choice for the computer: 1 = Rock, 2 = Paper, 3 = Scissor
+        let computerChoice = Math.ceil(Math.random() * 3);
+        let computerAction = "";
+        // Assign a string to computerAction based on the random number
+        if (computerChoice == 1) {
+          computerAction = "Rock";
+        } else if (computerChoice == 2) {
+          computerAction = "Paper";
+        } else if (computerChoice == 3) {
+          computerAction = "Scissor";
+        }
+        // Compare user's choice with computer's choice
+        if (action == computerAction) {
+          point.ties++;
+          //operations performed by using DOM manupulaation
+          document.querySelector(".result").innerHTML = "Its a tie!";
+          document.querySelector(
+            ".chose"
+          ).innerHTML = `You choose :${action} & computer chose  ${computerAction}`;
+          document.querySelector(
+            ".mark"
+          ).innerHTML = `win : ${point.wins} ,lose : ${point.loses} ,ties : ${point.ties}`;
+        } else if (
+          (action == "Rock" && computerAction == "Scissor") ||
+          (action == "Paper" && computerAction == "Rock") ||
+          (action == "Scissor" && computerAction == "Paper")
+        ) {
+          point.wins++;
+          //operations performed by using DOM manupulaation
+          document.querySelector(".result").innerHTML = "You win!";
+          document.querySelector(
+            ".chose"
+          ).innerHTML = `You choose :${action} & computer chose  ${computerAction}`;
+          document.querySelector(
+            ".mark"
+          ).innerHTML = `win : ${point.wins} ,lose : ${point.loses} ,ties : ${point.ties}`;
+        } else {
+          point.loses++;
+          //operations performed by using DOM manupulaation
+          document.querySelector(".result").innerHTML = "you loses!";
+          document.querySelector(
+            ".chose"
+          ).innerHTML = `You choose :${action} & computer chose  ${computerAction}`;
+          document.querySelector(
+            ".mark"
+          ).innerHTML = `win : ${point.wins} ,lose : ${point.loses} ,ties : ${point.ties}`;
+        }
+        /*storing the values to localStorage to get the current value after reffresh.it always store the value (point)in permenentrly
+        JSON.stringify used to conver the object into json string */
+        localStorage.setItem("point", JSON.stringify(point));
+      }
+    </script>
+  </body>
+</html>

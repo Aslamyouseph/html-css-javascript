@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>addEventLisiner(onkeydowm event)</title>
+  </head>
+  <body>
+    <h1>addEventLisiner(onkeydowm event)</h1>
+
+    <p id="para1"></p>
+    <p id="para2"></p>
+    <script>
+      //assinig the query into a varible
+      document.body.addEventListener("keydown", (event) => {
+        if (event.key === "a") {
+          first();
+        } else if (event.key === "b") {
+          second();
+        }
+      });
+
+      function first() {
+        document.getElementById("para1").innerHTML = `hello my name is aslam `;
+      }
+      function second() {
+        document.getElementById("para2").innerHTML = `hello my name is youseph`;
+      }
+    </script>
+  </body>
+</html>

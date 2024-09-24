@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>addEventLisiner(onclick event)</title>
+  </head>
+  <body>
+    <h1>addEventLisiner(onclick event)</h1>
+
+    <button class="click">click me</button>
+    <p id="para1"></p>
+    <p id="para2"></p>
+    <script>
+      //assinig the query into a varible
+      let first = document.querySelector(".click");
+
+      //calling from 28 line and assing to the 12 line
+      function hello1() {
+        document.getElementById("para1").innerHTML = `hello my name is aslam `;
+      }
+
+      //calling from 30 line and assing to the 12 line
+      function hello2() {
+        document.getElementById("para2").innerHTML = `hello my name is youseph`;
+      }
+
+      first.addEventListener("click", hello1);
+
+      first.addEventListener("click", hello2);
+
+      // Later, you can remove the event listener like this it wher remove the first function (line 19):
+
+      // first.removeEventListener("click", hello1);
+    </script>
+  </body>
+</html>

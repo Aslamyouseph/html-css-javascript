@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time Interval</title>
+  </head>
+  <body>
+    <button onclick="autoplayy()">autoplay</button>
+    <script>
+      let autoplay = false;
+      let intervalId;
+
+      function autoplayy() {
+        if (!autoplay) {
+          intervalId = setInterval(function () {
+            console.log("we are in the time interval");
+          }, 1000);
+          autoplay = true;
+        } else {
+          clearInterval(intervalId);
+          autoplay = false;
+        }
+      }
+
+      console.log("first this code will print");
+    </script>
+  </body>
+</html>
