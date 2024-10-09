@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //callback function
+
+      //   function add(sum) {
+      //     console.log(`Result = ${sum}`);
+      //   }
+
+      //   function operations(a, b, result) {
+      //     sum = a + b;
+      //     result(sum); //add functions calling
+      //   }
+      //   operations(40, 20, add); // operation functions calling
+
+      function second_operations_result(y) {
+        console.log(`multiplications result is ${y}`);
+      }
+
+      function second_operations(result, x) {
+        multi = result * x;
+        second_operations_result(multi);
+      }
+
+      function arithmetic_operations_result(result) {
+        console.log(`Arithmetic result of this operations is ${result}`);
+        second_operations(result, 2);
+      }
+
+      function arithmetic_operation(a, b, c) {
+        result = a + b;
+        c(result);
+      }
+
+      arithmetic_operation(5, 10, arithmetic_operations_result); //starting the execution from here
+    </script>
+  </body>
+</html>
